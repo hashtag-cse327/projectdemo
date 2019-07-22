@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/signup.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+    <title>ManushLagbe | Sign Up</title>
+  </head>
+  <body>
+    
+  <form method='POST' > {% csrf_token %}
+        
+        <h1 style="color: #4c95c6; ">Sign Up</h1>
+        <div class="txtb">
+          <input type="text">
+          <span data-placeholder="Name"></span>
+        </div>
+
+        <div class="txtb">
+          <input type="text">
+          <span data-placeholder="Email"></span>
+        </div>
+
+        <div class="txtb">
+          <input type="text">
+          <span data-placeholder="Phone No."></span>
+        </div>
+
+        <div class="txtb">
+          <input type="password">
+          <span data-placeholder="Password"></span>
+        </div>
+
+        <div class="txtb">
+          <input type="password">
+          <span data-placeholder="Re-enter Password"></span>
+        </div>
+
+        <button type='submit' class="btn btn-default">Submit</button>
+
+        <div class="bottom-text">
+          Already have an account? <a href="index.html">Sign In</a>
+        </div>
+   </form>
+    
+
+
+  <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+   </script>
+
+  
+  </body>
+</html>
