@@ -1,0 +1,165 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+      <!-- FontAwesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="{% static 'css/index.css' %}">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+      <title>ManushLagbe</title>
+
+</head>
+    
+<body>
+
+  <!-- Slider Starts -->
+
+<div class="parallax">
+  <div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <div class="container">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        </ol>
+    
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.bluenilelivery.com/wp-content/uploads/boston-private-driver.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Driver Service</h5>
+              <p>Need driver for a couple of hours for your car? This site is for you then...</p>
+            </div>
+          </div>
+      
+          <div class="carousel-item">
+            <img src="http://s3-ap-south-1.amazonaws.com/happyshappyimages/wp-content/uploads/2016/12/28134437/5ffff40e4b3426159275be850fa051d1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Mehndi Service</h5>
+              <p>Need someone to decorate your beautiful hands with mehndi? This site is for you then...</p>
+            </div>
+          </div>
+      
+          <div class="carousel-item">
+            <img src="https://cdn.hipwallpaper.com/i/82/61/RIosqb.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Volunteer Service</h5>
+              <p>Need volunteers for an event? This site is for you then...</p>
+            </div>
+          </div>
+      
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1493414307931-f6f5861f5029?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Photographer Service</h5>
+              <p>Need someone to capture your beautiful moments? This site is for you then...</p>
+            </div>
+          </div>
+        </div>
+    
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- Slider Ends -->
+
+
+  <div class="notes">
+    <ul>
+      <li>
+        <a href="#">
+          <br>
+          <h2>New Services</h2>
+          <h2>Coming Soon...</h2>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+
+<!-- Service Section-->
+<div class="shadow-lg p-3 mb-5 bg-dark" style="text-align: center; color: white;"><h3 style="margin: 0; padding: 0;">Available Services</h3></div>
+<div class="container d-flex justify-content-center" style="margin-bottom: 30px;">
+    <div class="row" style="padding-bottom: 10px;">
+      
+      <div class="col-sm">
+        <a href="{% url 'mehedi' %}"><div class="card" style="width: 12rem;">
+          <img src="https://apprecs.org/gp/images/app-icons/300/fa/com.drikpanchang.mehndi.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 style="text-align: center;">Mehendi Services</h3>
+            <p class="card-text" style="text-align: center;">Looking for a mehendi artist? We have some lucrative offers for you. Hurry Up!</p>
+          </div>
+        </div></a>
+      </div>
+    
+    <div class="col-sm"> 
+      <a href="{% url 'driver' %}"><div class="card" style="width: 12rem;">
+        <img src="https://image.freepik.com/free-vector/man-character-avatar-icon-taxi-driver_51635-2918.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 style="text-align: center;">Driver Services</h3>
+          <p class="card-text" style="text-align: center;">Is Your driver out of town? You need a part time driver? Chick here, hurry up!</p>
+        </div>
+      </div></a>
+    </div>
+      
+    <div class="col-sm">
+      <a href="{% url 'photo' %}"><div class="card" style="width: 14rem;">
+        <img src="https://image.freepik.com/free-vector/photographer-icon_1325-437.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 style="text-align: center;">Photographer Services</h3>
+          <p class="card-text" style="text-align: center;">Capture your beautiful moments! Hire a part time photographer.</p>
+        </div>
+      </div></a>
+    </div>
+      
+    <div class="col-sm">
+      <a href="{% url 'volunteer' %}"><div class="card" style="width: 13rem;">
+        <img src="https://i2.wp.com/rideandrevel.com/wp-content/uploads/2017/03/volunteer-icon.jpg?ssl=1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 style="text-align: center;">Volunteer Services</h3>
+          <p class="card-text" style="text-align: center;">Need volunteers for an event? Click here, to get volunteers.</p>
+        </div>
+      </div></a>
+    </div>
+    
+  </div>
+</div>
+
+    
+  <div class="footer" style="margin: 0;">
+    <p style="margin: 0;">Copyright © 2019 ManushLagbe.com. All rights reserved.</p>
+  </div>   
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+  </html>
+
+  {% endblock %}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+*{
+	margin: 0;
+  	padding: 0;
+  	text-decoration: none;
+  	box-sizing: border-box;
+  	font-family: 'Lobster Two', cursive;
+}
+
+
+body{
+	background-image: linear-gradient(120deg,#1c82c7,#c5c5c5);
+	background-size: cover;
+}
+
+.parallax { 
+  background-image: url("http://rokitseo.com/wp-content/uploads/2013/09/parallax_back.jpg");
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon{
+	text-align: center;
+}
+.card{
+	border-radius: 50px;
+}
+.card img{
+	border-style: solid;
+    border-radius: 50px;
+}
+
+.col-sm a{
+	color: black;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  
+   
+}
+/*Sticky Notes*/
+.notes ul,li{
+  list-style:none;
+}
+.notes ul{
+  overflow:hidden;
+  padding:3em;
+}
+.notes ul li a{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:10em;
+  width:10em;
+  padding:1em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+.notes ul li{
+  margin:1em;
+  float:left;
+}
+.notes ul li h2{
+  font-family: 'Kaushan Script', cursive !important;
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
+  text-align: center;
+}
+
+.notes ul li a{
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+}
+.notes ul li:nth-child(even) a{
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+.notes ul li:nth-child(3n) a{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+.notes ul li:nth-child(5n) a{
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+.notes ul li a:hover,ul li a:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+.notes {
+  height: 50%; 
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on front*/
+  bottom: -180px; /* Stay at the bottom */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+

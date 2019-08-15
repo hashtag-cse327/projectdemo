@@ -1,0 +1,86 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+    <title>ManushLagbe | Login</title>
+  </head>
+  <body>
+  <form method="POST" class="login-form"> {% csrf_token %}
+      <div class="container">
+        
+        <h5 style="margin-bottom: 20px; text-align: center; color: black;"> <b>Sign In</b> with your social account</h5>
+        <div class="row justify-content-center">  
+          <div class="col-sm">
+            <button type="button" class="btn btn-primary btn-lg"><i class="fab fa-facebook-square"></i><a style="color: white;" href="{% url 'social:begin' 'facebook' %}">  Continue with Facebook</a></button> 
+          </div>
+
+          <div class="col-sm">
+            <button type="button" class="btn btn-danger btn-lg"><i class="fab fa-google-plus-square"></i> Continue with Google</button> 
+          </div>
+        </div>
+      
+
+        <div class="head">
+          <div class="row">
+            <hr> <span style="margin: 5px; color: black;">OR</span> <hr>
+          </div>
+        </div>
+
+
+        <h5 style="text-align: center; color: black;"> <b>Sign In</b> with your username</h5> 
+      </div>
+        <div class="txtb">
+          <input type="text">
+          <span data-placeholder="Username">{{username}}</span>
+        </div>
+
+        <div class="txtb">
+          <input type="password">
+          <span  data-placeholder="Password">{{form}}</span>
+        </div>
+
+        <input type="submit" class="logbtn" value="Login">
+
+        <div class="bottom-text">
+          <span style="color: black; font-size: 20px;">Don't have account? <a href="http://localhost:8000/signup/">Sign up</a></span>
+        </div>
+
+        
+   </form>
+    
+
+
+  <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+   </script>
+
+  
+  </body>
+</html>
+
+{% endblock %}
