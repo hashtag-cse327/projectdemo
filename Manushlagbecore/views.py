@@ -11,3 +11,6 @@ class HomePage(TemplateView):
 class AboutPage(TemplateView):
 	template_name = 'aboutus.html'
 
+class ShomePage(TemplateView):
+	template_name = 'sindex.html'
+
